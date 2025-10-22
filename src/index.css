@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-regular: "Space Grotesk", sans-serif;
+
+  --color-bg: #FFFFFF;
+  --color-green: #B9FF66;
+  --color-gray: #F3F3F3;
+  --color-dark: #191A23;
+
+  --text-h1: 60px;
+  --text-h2: 40px;
+  --text-h3: 30px;
+  --text-h4: 20px;
+  --text-p: 18px;
+  --text-h1mob: 43px;
+  --text-h2mob: 36px;
+  --text-h3mob: 26px;
+  --text-h4mob: 18px;
+  --text-pmob: 16px;
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  font-family: var(--font-regular);
+}
+
+h1 {
+  @apply text-h1mob md:text-h1 font-bold
+}
+
+h2 {
+  @apply text-h2mob md:text-h2 font-bold
+}
+
+h3 {
+  @apply text-h3mob md:text-h3 font-bold
+}
+
+h4 {
+  @apply text-h4mob md:text-h4 font-bold
+}
+
+a {
+  @apply text-lg
+}
+
+span p {
+  @apply text-pmob md:text-p
+}
+
+@layer components {
+  .box-container {
+    @apply max-w-7xl mx-auto px-4
+  }
+
+  .main-button {
+    @apply bg-dark py-3 px-6 text-white rounded-lg cursor-pointer
+  }
+
+  .topic-bg {
+    @apply bg-green rounded-lg px-2 inline-flex
+  }
+
+  .service-card {
+    @apply p-8 rounded-4xl border border-b-6
+  }
+}
